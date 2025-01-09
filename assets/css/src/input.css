@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @font-face {
+
+        font-family: 'integralcf-regular';
+        src: url("../fonts/Fontspring-DEMO-integralcf-regular.otf") format('opentype');
+
+    }
+    @font-face {
+
+        font-family: 'integralcf-bold';
+        src: url("../fonts/Fontspring-DEMO-integralcf-bold.otf") format('opentype');
+
+    }
+    @font-face {
+
+        font-family: 'Satoshi-Regular';
+        src: url("../fonts/Satoshi-Regular.woff") format('woff');
+        src: url("../fonts/Satoshi-Regular.woff2") format('woff2');
+
+    }
+    @font-face {
+
+        font-family: 'Satoshi-Medium';
+        src: url("../fonts/Satoshi-Medium.woff") format('woff');
+        src: url("../fonts/Satoshi-Medium.woff2") format('woff2');
+
+    }
+
+    body {
+
+        @apply flex flex-col justify-center items-center;
+        font-family: 'Satoshi-Regular';
+
+    }
+    img{ object-fit: cover; }
+}
+
+@layer components {
+
+    .font-regular { font-family: 'integralcf-regular'; }
+    .font-bold{ font-family:  'integralcf-bold' ; }
+    .second-font-bold{ font-family:  'Satoshi-Medium' ; }
+
+    .padding {
+
+        @apply px-4;
+        @apply sm:px-10;
+        @apply md:px-20;
+    }
+    
+    @keyframes logo-carousel {
+
+        from {
+            transform: translateX(0%);
+        }
+        to{
+            transform: translateX(100%);
+
+        }
+
+    }
+    @keyframes second-logo-carousel {
+
+        from {
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+
+        }
+
+    }
+    @keyframes pc-carousel {
+
+        from {
+            transform: translateX(-10%);
+        }
+        to{
+            transform: translateX(100%);
+
+        }
+
+    }
+
+    .mobile-carousel { direction: rtl ; animation: logo-carousel linear infinite 40s;  }
+    .second-mobile-carousel { animation: second-logo-carousel linear infinite 40s;  }
+    .pc-carousel { direction: rtl ; animation: pc-carousel linear infinite 90s;  }
+
+    .new-arrivals-swiper .swiper-slide,
+    .top-selling-swiper .swiper-slide{
+        width: 160px!important;
+        @media (max-width: 400px) {  width: 140px!important;  }
+        @media (min-width:768px) { width: 192px!important; }
+        @apply ml-2;
+        @apply lg:ml-4;
+    }
+    .new-arrivals-swiper .swiper-slide:last-child { @apply mr-2; }
+
+    .comments-swiper .swiper-slide {
+        @media (max-width: 400px) {  width: 200px!important;  }
+        width: 260px!important;
+        @media (min-width: 1024px) {  width: 320px!important;  }
+
+        @apply ml-2;
+
+    }
+}
