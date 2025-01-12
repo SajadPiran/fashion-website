@@ -134,6 +134,13 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
+        background-color: var(--color);
+
+    }
+    .colors input[type='checkbox']:checked{
+
+        outline: 3px solid var(--color);
+        outline-offset: 1px;
 
     }
     input[type='range']{
@@ -159,4 +166,17 @@
 
     }
 
+    .sizes input:checked + label {@apply bg-black text-white ;}
+    footer::before {
+
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+
+    }
 }

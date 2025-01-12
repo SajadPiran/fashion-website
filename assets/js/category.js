@@ -13,9 +13,6 @@ $( filterButton ).on( 'click' , ()=>{
 
 });
 
-
-
-
 const rangeInput = $('input[type="range"]').toArray();
 const progress = $('.progress')[0];
 const rangePrices = $('.price').toArray();
