@@ -1,4 +1,4 @@
-import {} from './header-module.js';
+import {} from './shared/header.js';
 
 const filterButton = $('#filter-button')[0];
 const closeFilterButton = $('#close-filter-button')[0];

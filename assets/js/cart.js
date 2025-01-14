@@ -1,4 +1,4 @@
-import {} from './header-module.js';
+import {} from './shared/header.js';
 import ShoppingCart from './shopping-cart.js';
 
 const items = $('.shopping-cart-item').toArray();

@@ -179,4 +179,16 @@
         z-index: 0;
 
     }
+
+    .about-product--active { @apply text-black ;}
+    .about-product--active::after {
+
+        content: '';
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 2.15rem;
+    }
 }
